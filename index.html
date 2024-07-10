@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps + Folium</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Estilos para la página y el contenedor del mapa */
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      // Código JavaScript para inicializar Google Maps
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: {lat: 28.0516, lng: -14.3558}
+        });
+
+        // Cargar el contenido de Folium dentro de Google Maps
+        var foliumContent = `<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7887edf988b91b8a5d32c0f9e2ab18a1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7887edf988b91b8a5d32c0f9e2ab18a1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7887edf988b91b8a5d32c0f9e2ab18a1 = L.map(
+                "map_7887edf988b91b8a5d32c0f9e2ab18a1",
+                {
+                    center: [28.0516, -14.3558],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2f3e711337c81db419f3cc2cbdade784 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var marker_0c63c7f1194d7d3cabe23882e426f1ef = L.marker(
+                [28.0516, -14.3558],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_7ee7658593658570e8c67dd6aa4db92a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25b5de7804a0f3307f571c7a78d544fe = $(`<div id="html_25b5de7804a0f3307f571c7a78d544fe" style="width: 100.0%; height: 100.0%;">Morro Jable</div>`)[0];
+                popup_7ee7658593658570e8c67dd6aa4db92a.setContent(html_25b5de7804a0f3307f571c7a78d544fe);
+            
+        
+
+        marker_0c63c7f1194d7d3cabe23882e426f1ef.bindPopup(popup_7ee7658593658570e8c67dd6aa4db92a)
+        ;
+
+        
+    
+    
+            var marker_f7199ac482a9b800ecaf95bce3de531a = L.marker(
+                [28.0563, -14.5079],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_00700770b2e09468488da47e86a43d1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bd6a69cb8d699b027cc512048f68f66 = $(`<div id="html_6bd6a69cb8d699b027cc512048f68f66" style="width: 100.0%; height: 100.0%;">Punta Jandía</div>`)[0];
+                popup_00700770b2e09468488da47e86a43d1d.setContent(html_6bd6a69cb8d699b027cc512048f68f66);
+            
+        
+
+        marker_f7199ac482a9b800ecaf95bce3de531a.bindPopup(popup_00700770b2e09468488da47e86a43d1d)
+        ;
+
+        
+    
+    
+            var marker_f1402a54590ae5a7f54309a92e9df2d7 = L.marker(
+                [28.1114, -14.4034],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_973b391621d0de86d12f4424a9ea6f2d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ffca8d6e1c5ec0079680275a449906c = $(`<div id="html_6ffca8d6e1c5ec0079680275a449906c" style="width: 100.0%; height: 100.0%;">Playa de Cofete</div>`)[0];
+                popup_973b391621d0de86d12f4424a9ea6f2d.setContent(html_6ffca8d6e1c5ec0079680275a449906c);
+            
+        
+
+        marker_f1402a54590ae5a7f54309a92e9df2d7.bindPopup(popup_973b391621d0de86d12f4424a9ea6f2d)
+        ;
+
+        
+    
+    
+            var marker_92ed75dc63382339f3c3e96be285185e = L.marker(
+                [28.1912, -14.2766],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_2138b25f8d0cdf3720bffb69c7bd5fdc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e01462b49802223cc000a9ae5f05933b = $(`<div id="html_e01462b49802223cc000a9ae5f05933b" style="width: 100.0%; height: 100.0%;">La Pared</div>`)[0];
+                popup_2138b25f8d0cdf3720bffb69c7bd5fdc.setContent(html_e01462b49802223cc000a9ae5f05933b);
+            
+        
+
+        marker_92ed75dc63382339f3c3e96be285185e.bindPopup(popup_2138b25f8d0cdf3720bffb69c7bd5fdc)
+        ;
+
+        
+    
+    
+            var marker_0d3528a62dcf302bea68c6f8c46e9b17 = L.marker(
+                [28.409, -14.1467],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_18ab1436d17dd979e9a7372440c6614f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_356b4327d261375fd71c013a83e70acf = $(`<div id="html_356b4327d261375fd71c013a83e70acf" style="width: 100.0%; height: 100.0%;">Cuevas de Ajuy</div>`)[0];
+                popup_18ab1436d17dd979e9a7372440c6614f.setContent(html_356b4327d261375fd71c013a83e70acf);
+            
+        
+
+        marker_0d3528a62dcf302bea68c6f8c46e9b17.bindPopup(popup_18ab1436d17dd979e9a7372440c6614f)
+        ;
+
+        
+    
+    
+            var marker_cf4e6e4151c6f30e7aa667d230072125 = L.marker(
+                [28.4237, -14.1073],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_c2f6ae7a78cdd24eb615da1aa3ebe2d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66f2d24b06f1c3d73364f35b987b2bdf = $(`<div id="html_66f2d24b06f1c3d73364f35b987b2bdf" style="width: 100.0%; height: 100.0%;">Betancuria</div>`)[0];
+                popup_c2f6ae7a78cdd24eb615da1aa3ebe2d2.setContent(html_66f2d24b06f1c3d73364f35b987b2bdf);
+            
+        
+
+        marker_cf4e6e4151c6f30e7aa667d230072125.bindPopup(popup_c2f6ae7a78cdd24eb615da1aa3ebe2d2)
+        ;
+
+        
+    
+    
+            var marker_4f77552444c16bf42fde0233953971f0 = L.marker(
+                [28.7288, -13.8684],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_7824dd4096a27057680bc4e4bb784408 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92f092351aac2eb38a1e013c6bd1a1b6 = $(`<div id="html_92f092351aac2eb38a1e013c6bd1a1b6" style="width: 100.0%; height: 100.0%;">Corralejo</div>`)[0];
+                popup_7824dd4096a27057680bc4e4bb784408.setContent(html_92f092351aac2eb38a1e013c6bd1a1b6);
+            
+        
+
+        marker_4f77552444c16bf42fde0233953971f0.bindPopup(popup_7824dd4096a27057680bc4e4bb784408)
+        ;
+
+        
+    
+    
+            var marker_349eb303ceefe1391a0d2a9543a8d349 = L.marker(
+                [28.7437, -13.8357],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_565bf0a21f6f3ca7eeac46d0c6cb7282 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_604226062190cddc6d84fbaacb549798 = $(`<div id="html_604226062190cddc6d84fbaacb549798" style="width: 100.0%; height: 100.0%;">Islote de Lobos</div>`)[0];
+                popup_565bf0a21f6f3ca7eeac46d0c6cb7282.setContent(html_604226062190cddc6d84fbaacb549798);
+            
+        
+
+        marker_349eb303ceefe1391a0d2a9543a8d349.bindPopup(popup_565bf0a21f6f3ca7eeac46d0c6cb7282)
+        ;
+
+        
+    
+    
+            var marker_97d45d6db350172712a43b19c54fcdae = L.marker(
+                [28.7112, -13.841],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_33a006e891b790e8507444a64805e24a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34c5beac811bafa2bf36e2c466827b34 = $(`<div id="html_34c5beac811bafa2bf36e2c466827b34" style="width: 100.0%; height: 100.0%;">Parque Natural de las Dunas de Corralejo</div>`)[0];
+                popup_33a006e891b790e8507444a64805e24a.setContent(html_34c5beac811bafa2bf36e2c466827b34);
+            
+        
+
+        marker_97d45d6db350172712a43b19c54fcdae.bindPopup(popup_33a006e891b790e8507444a64805e24a)
+        ;
+
+        
+    
+    
+            var marker_24ece3006111bb252a03387938b295d9 = L.marker(
+                [28.4275, -14.063],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_4a67ec7960c0caabd6133591605db82e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dce7f1bd407cde9b6045fbd3fe3ad7ca = $(`<div id="html_dce7f1bd407cde9b6045fbd3fe3ad7ca" style="width: 100.0%; height: 100.0%;">Aguas Verdes</div>`)[0];
+                popup_4a67ec7960c0caabd6133591605db82e.setContent(html_dce7f1bd407cde9b6045fbd3fe3ad7ca);
+            
+        
+
+        marker_24ece3006111bb252a03387938b295d9.bindPopup(popup_4a67ec7960c0caabd6133591605db82e)
+        ;
+
+        
+    
+    
+            var marker_66350f4599cf5fe1abb511750a276521 = L.marker(
+                [28.3447, -14.0553],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_95b1ea1be1a4aeb85d47871e6a530045 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91668537dff2a1bd4f33404cbed6b101 = $(`<div id="html_91668537dff2a1bd4f33404cbed6b101" style="width: 100.0%; height: 100.0%;">Playa Cotufa</div>`)[0];
+                popup_95b1ea1be1a4aeb85d47871e6a530045.setContent(html_91668537dff2a1bd4f33404cbed6b101);
+            
+        
+
+        marker_66350f4599cf5fe1abb511750a276521.bindPopup(popup_95b1ea1be1a4aeb85d47871e6a530045)
+        ;
+
+        
+    
+    
+            var marker_fab3eb0a6b1ace6b44e1c1ba18faa392 = L.marker(
+                [28.566, -14.0358],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_2f314a6c440ca927557c037f4c021c58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48649394ccb374f4861ff3f1d1b98428 = $(`<div id="html_48649394ccb374f4861ff3f1d1b98428" style="width: 100.0%; height: 100.0%;">Tindaya</div>`)[0];
+                popup_2f314a6c440ca927557c037f4c021c58.setContent(html_48649394ccb374f4861ff3f1d1b98428);
+            
+        
+
+        marker_fab3eb0a6b1ace6b44e1c1ba18faa392.bindPopup(popup_2f314a6c440ca927557c037f4c021c58)
+        ;
+
+        
+    
+    
+            var marker_ae55471b844d6c0377f23d4972db9c8b = L.marker(
+                [28.1678, -14.2266],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_0f2e1c781117cb4a8007e95ad5b448e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd49054cb433df165761d8d3717075fe = $(`<div id="html_cd49054cb433df165761d8d3717075fe" style="width: 100.0%; height: 100.0%;">Costa Calma</div>`)[0];
+                popup_0f2e1c781117cb4a8007e95ad5b448e0.setContent(html_cd49054cb433df165761d8d3717075fe);
+            
+        
+
+        marker_ae55471b844d6c0377f23d4972db9c8b.bindPopup(popup_0f2e1c781117cb4a8007e95ad5b448e0)
+        ;
+
+        
+    
+    
+            var marker_2d42c3c1d1c4a06ede07685f88488b58 = L.marker(
+                [28.112, -14.227],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_f90dd45574587eb323395479b91c3504 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_900e7ca2f7aff80505c7978cb4348c62 = $(`<div id="html_900e7ca2f7aff80505c7978cb4348c62" style="width: 100.0%; height: 100.0%;">Playa de Sotavento</div>`)[0];
+                popup_f90dd45574587eb323395479b91c3504.setContent(html_900e7ca2f7aff80505c7978cb4348c62);
+            
+        
+
+        marker_2d42c3c1d1c4a06ede07685f88488b58.bindPopup(popup_f90dd45574587eb323395479b91c3504)
+        ;
+
+        
+    
+    
+            var marker_70e0778a3a58e3075ab61ef3577caad5 = L.marker(
+                [28.4113, -14.0133],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_da2d949031f1464eb3f1dadfd0c296c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15320f0970f50d2848fa2c6467297e80 = $(`<div id="html_15320f0970f50d2848fa2c6467297e80" style="width: 100.0%; height: 100.0%;">Antigua</div>`)[0];
+                popup_da2d949031f1464eb3f1dadfd0c296c1.setContent(html_15320f0970f50d2848fa2c6467297e80);
+            
+        
+
+        marker_70e0778a3a58e3075ab61ef3577caad5.bindPopup(popup_da2d949031f1464eb3f1dadfd0c296c1)
+        ;
+
+        
+    
+    
+            var marker_ebb142c3fd09463d66f74bf6f002dbbd = L.marker(
+                [28.3943, -13.8603],
+                {}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+        var popup_063cbb8824fb011a08f0af6088e9c146 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc80badddff29e4ec97f92e9ee596328 = $(`<div id="html_fc80badddff29e4ec97f92e9ee596328" style="width: 100.0%; height: 100.0%;">Caleta de Fuste</div>`)[0];
+                popup_063cbb8824fb011a08f0af6088e9c146.setContent(html_fc80badddff29e4ec97f92e9ee596328);
+            
+        
+
+        marker_ebb142c3fd09463d66f74bf6f002dbbd.bindPopup(popup_063cbb8824fb011a08f0af6088e9c146)
+        ;
+
+        
+    
+    
+            var poly_line_348235f8caeed8bc2ea674e3f59a75cf = L.polyline(
+                [[28.0516, -14.3558], [28.0563, -14.5079]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_b2fb5d1b3e34be8a864c6e5370330681 = L.polyline(
+                [[28.0563, -14.5079], [28.1114, -14.4034]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_9658022554e0d002dba742a2ed4a57a5 = L.polyline(
+                [[28.0516, -14.3558], [28.1912, -14.2766]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_54cf9d493e2e9849d1e73cdf6dc3393c = L.polyline(
+                [[28.1912, -14.2766], [28.409, -14.1467]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_3ade3d3f71bdac7ece3617ece2a1b2bc = L.polyline(
+                [[28.409, -14.1467], [28.4237, -14.1073]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_c415dce3ab8b04419ba6ad66a9399898 = L.polyline(
+                [[28.0516, -14.3558], [28.7288, -13.8684]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_47e836e073e4b3e29798a1a7f706f2e6 = L.polyline(
+                [[28.7288, -13.8684], [28.7437, -13.8357]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_026e9cecf8933ff06b383a84e1f62870 = L.polyline(
+                [[28.7288, -13.8684], [28.7112, -13.841]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_5762fe6b21b99f1038761f425e1d6b71 = L.polyline(
+                [[28.0516, -14.3558], [28.4275, -14.063]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_aa51a3a1970e7ba4e6825cbaeb8d58bc = L.polyline(
+                [[28.4275, -14.063], [28.3447, -14.0553]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_09ddd47d8318a4e24591137f60ede9a8 = L.polyline(
+                [[28.3447, -14.0553], [28.566, -14.0358]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_ba2a6fcbb0625d82434d1adb5bea3589 = L.polyline(
+                [[28.0516, -14.3558], [28.1678, -14.2266]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_fa22a7a5f88cb4f7146b58179603fb02 = L.polyline(
+                [[28.1678, -14.2266], [28.112, -14.227]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_97c22b363cd8b1f6597a8a25599d9df1 = L.polyline(
+                [[28.0516, -14.3558], [28.4113, -14.0133]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+    
+            var poly_line_0afdd04059eaf73c55883b56d3d8f032 = L.polyline(
+                [[28.4113, -14.0133], [28.3943, -13.8603]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_7887edf988b91b8a5d32c0f9e2ab18a1);
+        
+</script>
+</html>`;
+        var infowindow = new google.maps.InfoWindow({ content: foliumContent });
+        infowindow.open(map);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+  </body>
+</html>
